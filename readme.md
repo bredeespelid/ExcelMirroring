@@ -6,7 +6,7 @@ This project is an **Azure Function** that polls Microsoft Graph API every 5 min
 - Convert them to Parquet format
 - Upload them to Azure Blob Storage (or OneLake)
 
-It is designed for environments where multiple users (e.g., store managers, accountants) work with Excel files in Microsoft 365.
+It is designed for environments where multiple users work with Excel files in Microsoft 365.
 
 ---
 
