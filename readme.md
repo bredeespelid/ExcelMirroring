@@ -23,5 +23,5 @@ The application monitors a configured folder for new or modified Excel files. On
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ExcelMirroring.git
+   git clone https://github.com/bredeespelid/ExcelMirroring.git
    cd ExcelMirroring
