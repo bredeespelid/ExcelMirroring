@@ -59,3 +59,18 @@ config = {
     "blob_connection_string": "<azure-blob-connection-string>",
     "blob_container_name": "regnskap-parquet"
 }
+
+
+### 🔑 How to get these values
+
+| Key                    | How to get it                                                                                          |
+|------------------------|---------------------------------------------------------------------------------------------------------|
+| `tenant_id`            | Azure Portal → Azure Active Directory → Overview → **Directory (tenant) ID**                           |
+| `client_id`            | Azure Portal → Azure AD → App Registrations → Select your app → **Application (client) ID**            |
+| `client_secret`        | Azure Portal → Azure AD → App Registrations → Certificates & Secrets → **New client secret**           |
+| `site_id`              | Use Microsoft Graph Explorer:<br>`GET https://graph.microsoft.com/v1.0/sites/<tenant>.sharepoint.com:/sites/<site-name>`<br>Copy the `id` field from the response |
+| `drive_id`             | Use Graph Explorer:<br>`GET https://graph.microsoft.com/v1.0/sites/<site-id>/drives`<br>Copy the `id` field for the document library (usually "Documents") |
+| `folder_path`          | The relative path to the folder in SharePoint or OneDrive (e.g., `/Regnskap`)                           |
+| `blob_connection_string`| Azure Portal → Storage Account → Access keys → **Connection string**                                    |
+| `blob_container_name`  | Azure Portal → Storage Account → Containers → Your container name (e.g., `regnskap-parquet`)            |
+
