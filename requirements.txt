@@ -1,0 +1,7 @@
+azure-functions
+msal
+requests
+pandas
+openpyxl
+pyarrow
+azure-storage-blob
