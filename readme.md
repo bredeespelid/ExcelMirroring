@@ -63,17 +63,16 @@ config = {
 
 ### 🔑 How to get these values
 
-| Key                    | How to get it                                                                                          |
-|------------------------|---------------------------------------------------------------------------------------------------------|
-| `tenant_id`            | Azure Portal → Azure Active Directory → Overview → **Directory (tenant) ID**                           |
-| `client_id`            | Azure Portal → Azure AD → App Registrations → Select your app → **Application (client) ID**            |
-| `client_secret`        | Azure Portal → Azure AD → App Registrations → Certificates & Secrets → **New client secret**           |
-| `site_id`              | Use Microsoft Graph Explorer:<br>`GET https://graph.microsoft.com/v1.0/sites/<tenant>.sharepoint.com:/sites/<site-name>`<br>Copy the `id` field from the response |
-| `drive_id`             | Use Graph Explorer:<br>`GET https://graph.microsoft.com/v1.0/sites/<site-id>/drives`<br>Copy the `id` field for the document library (usually "Documents") |
-| `folder_path`          | The relative path to the folder in SharePoint or OneDrive (e.g., `/Regnskap`)                           |
-| `blob_connection_string`| Azure Portal → Storage Account → Access keys → **Connection string**                                    |
-| `blob_container_name`  | Azure Portal → Storage Account → Containers → Your container name (e.g., `regnskap-parquet`)            |
+| Key                    | How to get it                                                                                                                                              |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `tenant_id`            | Azure Portal → Azure Active Directory → Overview → Directory (tenant) ID                                                                                   |
+| `client_id`            | Azure Portal → Azure AD → App Registrations → Select your app → Application (client) ID                                                                    |
+| `client_secret`        | Azure Portal → Azure AD → App Registrations → Certificates & Secrets → New client secret                                                                   |
+| `site_id`              | Use Microsoft Graph Explorer: `GET https://graph.microsoft.com/v1.0/sites/<tenant>.sharepoint.com:/sites/<site-name>`Copy the `id` field from the response |
+| `drive_id`             | Use Graph Explorer:`GET https://graph.microsoft.com/v1.0/sites/<site-id>/drives`Copy the `id` field for the document library (usually "Documents")         |
+| `folder_path`          | The relative path to the folder in SharePoint or OneDrive (e.g., `/Files`)                                                                                 |
+| `blob_connection_string`| Azure Portal → Storage Account → Access keys → Connection string                                                                                          |
+| `blob_container_name`  | Azure Portal → Storage Account → Containers → Your container name (e.g., `files-parquet`)                                                                  |
 
 ```
-![Flow diagram](https://github.com/bredeespelid/ExcelMirroring/blob/main/Deployment/flow_diagram.png?raw=true)
 
