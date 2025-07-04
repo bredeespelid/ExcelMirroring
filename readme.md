@@ -74,3 +74,6 @@ config = {
 | `blob_connection_string`| Azure Portal → Storage Account → Access keys → **Connection string**                                    |
 | `blob_container_name`  | Azure Portal → Storage Account → Containers → Your container name (e.g., `regnskap-parquet`)            |
 
+```
+![Flow diagram](https://github.com/bredeespelid/ExcelMirroring/blob/main/Deployment/flow_diagram.png?raw=true)
+
