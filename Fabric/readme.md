@@ -33,7 +33,7 @@ Before you start, ensure you have:
 1. Log into [Microsoft Fabric](https://app.fabric.microsoft.com).
 2. Go to the workspace where you want the Lakehouse.
 3. Click "New" and select "Lakehouse".
-4. Enter a name for your Lakehouse (for example, `RegnskapLakehouse`).
+4. Enter a name for your Lakehouse (for example, `Lakehouse`).
 5. Click "Create".
 
 This Lakehouse will act as the destination where all mirrored data will appear.
@@ -54,7 +54,7 @@ This Lakehouse will act as the destination where all mirrored data will appear.
 Provide the required details for your Azure Storage:
 
 - **Storage account name**: The name of your Azure Storage account.
-- **Container name**: The name of the container where the Parquet files are stored (for example, `regnskap-parquet`).
+- **Container name**: The name of the container where the Parquet files are stored (for example, `files-parquet`).
 - **Folder path**: The folder within the container to monitor. Use `/` for the root or specify a subfolder if needed.
 - **Authentication method**: Choose either "Account key" or "SAS token".
   - If using Account key, retrieve it from Azure Portal → Storage Account → Access keys.
@@ -79,7 +79,7 @@ This step configures Fabric to continuously watch for new or updated files in th
 1. Choose the table mapping strategy:
    - Single table: Use this if all Parquet files have the same schema.
    - Multiple tables: Use this if each folder represents a different table with different schemas.
-2. Specify the table name (for example, `regnskap_data`).
+2. Specify the table name (for example, `files_data`).
 3. Click "Finish" to complete the setup.
 
 Fabric will now create tables in your Lakehouse and populate them as files arrive.
@@ -99,5 +99,5 @@ Fabric will now create tables in your Lakehouse and populate them as files arriv
 1. Open SQL analytics within Microsoft Fabric.
 2. Run a query to explore the data:
 ```sql
-SELECT TOP 100 * FROM RegnskapLakehouse.regnskap_data;
+SELECT TOP 100 * FROM Lakehouse.files_data;
 
